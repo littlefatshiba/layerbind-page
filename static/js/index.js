@@ -119,6 +119,33 @@ function setupVideoCarouselAutoplay() {
     });
 }
 
+function setupGalleriesViewer() {
+    const items = document.querySelectorAll('.gallery-item');
+    const prevButton = document.getElementById('gallery-prev');
+    const nextButton = document.getElementById('gallery-next');
+    if (!items.length || !prevButton || !nextButton) return;
+
+    let currentIndex = 0;
+
+    function render(index) {
+        items.forEach((item, itemIndex) => {
+            item.classList.toggle('active', itemIndex === index);
+        });
+    }
+
+    prevButton.addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        render(currentIndex);
+    });
+
+    nextButton.addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % items.length;
+        render(currentIndex);
+    });
+
+    render(currentIndex);
+}
+
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
 
@@ -127,8 +154,9 @@ $(document).ready(function() {
 		slidesToShow: 1,
 		loop: true,
 		infinite: true,
-		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplay: false,
+		navigation: true,
+		pagination: true,
     }
 
 	// Initialize all div with carousel class
@@ -138,5 +166,6 @@ $(document).ready(function() {
     
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
+    setupGalleriesViewer();
 
 })
