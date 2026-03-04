@@ -130,6 +130,7 @@ function setupGalleriesViewer() {
     function render(index) {
         items.forEach((item, itemIndex) => {
             item.classList.toggle('active', itemIndex === index);
+            item.style.display = itemIndex === index ? 'block' : 'none';
         });
     }
 

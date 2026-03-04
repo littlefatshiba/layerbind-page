@@ -272,24 +272,24 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3 has-text-centered">Galleries</h2>
       <div class="galleries-viewer">
-        <button class="gallery-nav prev" id="gallery-prev" aria-label="Previous gallery image">
+        <button class="gallery-nav prev" id="gallery-prev" aria-label="Previous gallery image" style="width:44px;height:44px;border:1px solid #e2e8f0;border-radius:9999px;background:#fff;cursor:pointer;">
           <i class="fas fa-chevron-left"></i>
         </button>
         <div class="gallery-track">
-          <div class="gallery-item active">
+          <div class="gallery-item active" style="display:block;">
           <img src="static/images/applications.jpeg" alt="LayerBind application: occlusion control and instance editing" loading="lazy">
           <h2 class="subtitle caption-text">
             <strong>Application 1.</strong> Flexible occlusion control and instance modification. LayerBind supports controllable reordering of visible layers and targeted per-instance edits while preserving global scene coherence.
           </h2>
           </div>
-          <div class="gallery-item">
+          <div class="gallery-item" style="display:none;">
           <img src="static/images/more_applications2.jpg" alt="LayerBind application: composited image editing" loading="lazy">
           <h2 class="subtitle caption-text">
             <strong>Application 2.</strong> Composited image editing with branch-wise instructions. By treating the original generation as shared background context, LayerBind enables localized edits with consistent layout and occlusion relationships.
           </h2>
           </div>
         </div>
-        <button class="gallery-nav next" id="gallery-next" aria-label="Next gallery image">
+        <button class="gallery-nav next" id="gallery-next" aria-label="Next gallery image" style="width:44px;height:44px;border:1px solid #e2e8f0;border-radius:9999px;background:#fff;cursor:pointer;">
           <i class="fas fa-chevron-right"></i>
         </button>
       </div>
@@ -305,7 +305,7 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{LayerBind2026,
+      <pre id="bibtex-code" style="white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;"><code style="white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;">@article{LayerBind2026,
   title={Layer-wise Instance Binding for Regional and Occlusion Control in Text-to-Image Diffusion Transformers},
   author={Ruidong Chen and Yancheng Bai and Xuanpu Zhang and Jianhao Zeng and Lanjun Wang and Dan Song and Lei Sun and Xiangxiang Chu and Anan Liu},
   journal={CVPR},
